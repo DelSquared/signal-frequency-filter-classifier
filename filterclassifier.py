@@ -30,7 +30,7 @@ cutofffreq=round(abs(b/m)[0])
 #Plotting
 plt.plot(X,Y,label="Data")
 plt.plot(X,logisticRegr.predict(X),label="Prediction")
-plt.plot(X,1/(1+np.exp(-2.3025*(m*X+b))),label="Prediction from extracted coeffs.") #This is a known issue
+plt.plot(X,1/(1+np.exp(-2.3025*(m*X+b))),label="Prediction from extracted coeffs.") #This is a known issue where the plot looks less "squished"
 plt.title("{} filter with cut off at around: {}Hz".format(f, cutofffreq))
 plt.legend(loc="best")
 plt.show()
