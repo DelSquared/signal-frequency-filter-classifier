@@ -43,3 +43,4 @@ Process finished with exit code 0
 - https://en.wikipedia.org/wiki/Regression_analysis
 - https://en.wikipedia.org/wiki/Logistic_function
 - https://en.wikipedia.org/wiki/Mathematical_optimization
+- https://en.wikipedia.org/wiki/Perceptron
