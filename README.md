@@ -2,13 +2,14 @@
 The application of machine learning techniques (such as logistic regression) to classify a frequency filter from its spectrum
 
 #### Content:
-- [Intro](https://github.com/DelSquared/signal-frequency-filter-classifier#filter-classifier-from-scratch-this-time-without-using-scikitlearn)
+- [Filter Classifier From Scratch](https://github.com/DelSquared/signal-frequency-filter-classifier#filter-classifier-from-scratch-this-time-without-using-scikitlearn)
+- [Smoothening Algorithm](https://github.com/DelSquared/smoothening-algorithm)
 - [Generating Spectra For Testing](https://github.com/DelSquared/signal-frequency-filter-classifier#generating-spectra-for-testing)
 - [Example Output](https://github.com/DelSquared/signal-frequency-filter-classifier#example-output)
 - [Further Readings](https://github.com/DelSquared/signal-frequency-filter-classifier#further-readings)
 
 ### Filter Classifier From Scratch (this time without using SciKitLearn)
-As opposed to the previous script (now called ```filterclassifierOLD.py```) this one can easily handle mildly noisy signals like those seen in the testspectra folder. Those signals were constructed by evaluating a logistic function with randomly generated parameters and then perturbed by a low-variance Gaussian noise. The optimisation is done using a gradient descent iterative algorithm (for each coefficient vector *K*,  *K*<sub>*n*+1</sub> = *K*<sub>*n*</sub> - ∇*E* *dt*  where *dt* is the step size or "learning rate" or component-wise  *k*<sub>*n*+1</sub> = *k*<sub>*n*</sub> - *∂<sub>k*</sub>*E* *dt* ) . The mean squared error was used as an error function *E*. The sum was used instead since the factor of <sup>1</sup>/<sub>*n*</sub> is a constant and made irrelevant by the step size. Likewise for the factor of 2 in the partial derivatives so they were also omitted.
+As opposed to the previous script (now called ```filterclassifierOLD.py```) this one ```FilterClassifier.py``` can easily handle mildly noisy signals like those seen in the testspectra folder. Those signals were constructed by evaluating a logistic function with randomly generated parameters and then perturbed by a low-variance Gaussian noise. The optimisation is done using a gradient descent iterative algorithm (for each coefficient vector *K*,  *K*<sub>*n*+1</sub> = *K*<sub>*n*</sub> - ∇*E* *dt*  where *dt* is the step size or "learning rate" or component-wise  *k*<sub>*n*+1</sub> = *k*<sub>*n*</sub> - *∂<sub>k*</sub>*E* *dt* ) . The mean squared error was used as an error function *E*. The sum was used instead since the factor of <sup>1</sup>/<sub>*n*</sub> is a constant and made irrelevant by the step size. Likewise for the factor of 2 in the partial derivatives so they were also omitted.
 
 The method used can be considered to be a single-input perceptron model *y* = *f*(*wx*+*b*) where *f* is the activation function taken to be a logistic function *f*(*x*) = <sup>1</sup>/<sub>1+exp(-*wx*-*b*)</sub>. The following image is a good enough visual representation but the *Y* input is excluded
 
@@ -16,6 +17,16 @@ The method used can be considered to be a single-input perceptron model *y* = *f
   <img src="https://www.cs.utexas.edu/~teammco/misc/perceptron/perceptron.png" width="350"/>
 </p>
 <sub>Image from https://www.cs.utexas.edu/~teammco/misc/perceptron/ </sub>
+
+### Smoothening Algorithm
+
+As a smoothening algorithm, the script```SpectrumSmoothener.py``` draws inspiration from a blurring algorithm for images. It uses a normalised Gaussian kernel vector with components ```[7,26,41,26,7]```. The Gaussian kernel was chosen in order to preserve most of the integrity of the individual data points while still providing sufficient weighting to remove the jaggedness. Other variations could be to use a Lorentzian (or a Cauchy for those outside of Physics) distribution to weight the blurring which is a thinner bell curve with thicker "tails" however for my purposes the Gaussian was sufficient. Something to keep in mind is that the more iterations performed, the less steep the cut-off gradient becomes so caution is to be taken when setting the iteration hyperparameter. Tests will be carried out on this in the future before being implemented in the main script to see whether it improves convergence and whether it skewes the results too far from the actual.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/DelSquared/signal-frequency-filter-classifier/master/Example%20Outputs/Smoothening%20Example.gif" width="400"/>
+  <img src="https://raw.githubusercontent.com/DelSquared/signal-frequency-filter-classifier/master/Example%20Outputs/Kernel.jpg" width="400"/>
+</p>
+
 
 ### Generating Spectra For Testing
 
