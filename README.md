@@ -1,5 +1,5 @@
 # Signal Frequency Filter Classifier
-The application of machine learning techniques (such as logistic regression) to classify a frequency filter from its spectrum
+The application of machine learning techniques (such as linear regression) to classify a frequency filter from its spectrum
 
 #### Content:
 - [Filter Classifier From Scratch](https://github.com/DelSquared/signal-frequency-filter-classifier#filter-classifier-from-scratch-this-time-without-using-scikitlearn)
