@@ -9,7 +9,7 @@ The application of machine learning techniques (such as linear regression) to cl
 - [Further Readings](https://github.com/DelSquared/signal-frequency-filter-classifier#further-readings)
 
 ### Filter Classifier From Scratch (this time without using SciKitLearn)
-As opposed to the previous script (now called ```filterclassifierOLD.py```) this one ```FilterClassifier.py``` can easily handle mildly noisy signals like those seen in the testspectra folder. Those signals were constructed by evaluating a logistic function with randomly generated parameters and then perturbed by a low-variance Gaussian noise. The optimisation is done using a gradient descent iterative algorithm (for each coefficient vector *K*,  *K*<sub>*n*+1</sub> = *K*<sub>*n*</sub> - ∇*E* *dt*  where *dt* is the step size or "learning rate" or component-wise  *k*<sub>*n*+1</sub> = *k*<sub>*n*</sub> - *∂<sub>k*</sub>*E* *dt* ) . The mean squared error was used as an error function *E*. The sum was used instead since the factor of <sup>1</sup>/<sub>*n*</sub> is a constant and made irrelevant by the step size. Likewise for the factor of 2 in the partial derivatives so they were also omitted.
+As opposed to the previous script (now called ```filterclassifierOLD.py```) this one ```FilterClassifier.py``` can easily handle mildly noisy signals like those seen in the testspectra folder. Those signals were constructed by evaluating a logistic function with randomly generated parameters and then perturbed by a low-variance Gaussian noise. The optimisation is done using a gradient descent iterative algorithm (for each coefficient vector *K*,  *K*<sub>*n*+1</sub> = *K*<sub>*n*</sub> - ∇*E* *dt*  where *dt* is the step size or "learning rate" or component-wise  *k*<sub>*n*+1</sub> = *k*<sub>*n*</sub> - *∂<sub>k*</sub>*E* *dt* ) . The mean squared error was used as an error function *E*. The sum was used instead since the factor of <sup>1</sup>/<sub>*n*</sub> is a constant and made irrelevant by the step size. Likewise for the factor of 2 in the partial derivatives so they were also omitted. I have also a javascript version which I made which is available on the [repository's page](https://delsquared.github.io/signal-frequency-filter-classifier/).
 
 The method used can be considered to be a single-input perceptron model *y* = *f*(*wx*+*b*) where *f* is the activation function taken to be a logistic function *f*(*x*) = <sup>1</sup>/<sub>1+exp(-*wx*-*b*)</sub>. The following image is a good enough visual representation but the *Y* input is excluded
 
@@ -61,6 +61,7 @@ Step slope:  -39.205795575874276
 Process finished with exit code 0
 ```
 #### Further Readings:
+- https://delsquared.github.io/signal-frequency-filter-classifier/
 - https://en.wikipedia.org/wiki/Gradient_descent
 - https://en.wikipedia.org/wiki/Logistic_regression
 - https://en.wikipedia.org/wiki/Regression_analysis
