@@ -41,7 +41,7 @@ function draw() {
   stroke("black");
   fill("white");
   text("Error: "+Math.floor(100*Train(x,y))/100,10,15);
-  text("f(x) = exp("+Math.floor(100*a)/100+"x + "+Math.floor(100*b)/100+")",10,30);
+  text("f(x) = 1/(1+exp("+Math.floor(100*a)/100+"x + "+Math.floor(100*b)/100+"))",10,30);
   text("FPS: "+Math.floor(100*frameRate())/100,10,45);
 
 }
