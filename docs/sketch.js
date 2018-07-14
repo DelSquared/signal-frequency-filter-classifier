@@ -4,7 +4,7 @@ var x,y,n;
 var a=10,b=3;
 var data;
 function preload() {
-  data = loadTable("spec2.csv");
+  data = loadTable("spec.csv");
 }
 
 function setup() {
