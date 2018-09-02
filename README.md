@@ -4,6 +4,7 @@ The application of machine learning techniques (such as linear regression) to cl
 #### Content:
 - [Filter Classifier From Scratch](https://github.com/DelSquared/signal-frequency-filter-classifier#filter-classifier-from-scratch-this-time-without-using-scikitlearn)
 - [Smoothening Algorithm](https://github.com/DelSquared/signal-frequency-filter-classifier#smoothening-algorithm)
+- [K-Means Clustering]()
 - [Generating Spectra For Testing](https://github.com/DelSquared/signal-frequency-filter-classifier#generating-spectra-for-testing)
 - [Example Output](https://github.com/DelSquared/signal-frequency-filter-classifier#example-output)
 - [Further Readings](https://github.com/DelSquared/signal-frequency-filter-classifier#further-readings)
@@ -27,6 +28,9 @@ As a smoothening algorithm, the script```SpectrumSmoothener.py``` draws inspirat
   <img src="https://raw.githubusercontent.com/DelSquared/signal-frequency-filter-classifier/master/Example%20Outputs/Kernel.jpg" width="400"/>
 </p>
 
+### K-Means Clustering
+
+There is merit to using K-means clustering in order to "compress" the data of the signal spectrum as seen in this sketch I created [here](https://delsquared.github.io/K-Means-Clustering-Visualisation/index2.html). This can potentially be used both instead of smoothening and instead of the curve fitting due to how effective it is at reproducing the shape of the spectrum extremely fast
 
 ### Generating Spectra For Testing
 
@@ -68,3 +72,4 @@ Process finished with exit code 0
 - https://en.wikipedia.org/wiki/Logistic_function
 - https://en.wikipedia.org/wiki/Mathematical_optimization
 - https://en.wikipedia.org/wiki/Perceptron
+- https://en.wikipedia.org/wiki/K-means_clustering
