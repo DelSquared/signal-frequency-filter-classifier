@@ -30,7 +30,7 @@ As a smoothening algorithm, the script```SpectrumSmoothener.py``` draws inspirat
 
 ### K-Means Clustering
 
-There is merit to using K-means clustering in order to "compress" the data of the signal spectrum as seen in this sketch I created [here](https://delsquared.github.io/K-Means-Clustering-Visualisation/index2.html). This can potentially be used both instead of smoothening and instead of the curve fitting due to how effective it is at reproducing the shape of the spectrum extremely fast. Also this could have the advantage of generalising further to band-pass filters and not just low/high-pass filters but that remains to be seen.
+There is merit to using K-means clustering in order to "compress" the data of the signal spectrum as seen in this sketch I created [here](https://delsquared.github.io/K-Means-Clustering-Visualisation/index2.html). This can potentially be used both instead of smoothening and instead of the curve fitting due to how effective it is at reproducing the shape of the spectrum extremely fast. Also this could have the advantage of generalising further to band-pass filters and not just low/high-pass filters but that remains to be seen. I plan on making a more in-depth repository discussing K-means [here](https://github.com/DelSquared/K-Means-Clustering-Visualisation).
 
 ### Generating Spectra For Testing
 
@@ -73,3 +73,5 @@ Process finished with exit code 0
 - https://en.wikipedia.org/wiki/Mathematical_optimization
 - https://en.wikipedia.org/wiki/Perceptron
 - https://en.wikipedia.org/wiki/K-means_clustering
+- https://github.com/DelSquared/K-Means-Clustering-Visualisation
+- https://delsquared.github.io/K-Means-Clustering-Visualisation
