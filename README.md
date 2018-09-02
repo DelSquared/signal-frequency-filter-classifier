@@ -4,7 +4,7 @@ The application of machine learning techniques (such as linear regression) to cl
 #### Content:
 - [Filter Classifier From Scratch](https://github.com/DelSquared/signal-frequency-filter-classifier#filter-classifier-from-scratch-this-time-without-using-scikitlearn)
 - [Smoothening Algorithm](https://github.com/DelSquared/signal-frequency-filter-classifier#smoothening-algorithm)
-- [K-Means Clustering]()
+- [K-Means Clustering](https://github.com/DelSquared/signal-frequency-filter-classifier/blob/master/README.md#k-means-clustering)
 - [Generating Spectra For Testing](https://github.com/DelSquared/signal-frequency-filter-classifier#generating-spectra-for-testing)
 - [Example Output](https://github.com/DelSquared/signal-frequency-filter-classifier#example-output)
 - [Further Readings](https://github.com/DelSquared/signal-frequency-filter-classifier#further-readings)
