@@ -51,4 +51,4 @@ for _ in range (iterations):
     plt.title("Plotting Various Levels of Smoothing: From 0 to {} iterations".format(iterations))
     plt.legend(loc="best")
     
-plt.show
+plt.show()
