@@ -28,6 +28,10 @@ As a smoothening algorithm, the script```SpectrumSmoothener.py``` draws inspirat
   <img src="https://raw.githubusercontent.com/DelSquared/signal-frequency-filter-classifier/master/Example%20Outputs/Kernel.jpg" width="400"/>
 </p>
 
+### Convolution Classifier (Cython)
+
+Documentation coming soon :)
+
 ### K-Means Clustering
 
 There is merit to using K-means clustering in order to "compress" the data of the signal spectrum as seen in this sketch I created [here](https://delsquared.github.io/K-Means-Clustering-Visualisation/index2.html). This can potentially be used both instead of smoothening and instead of the curve fitting due to how effective it is at reproducing the shape of the spectrum extremely fast. Also this could have the advantage of generalising further to band-pass filters and not just low/high-pass filters but that remains to be seen. I plan on making a more in-depth repository discussing K-means [here](https://github.com/DelSquared/K-Means-Clustering-Visualisation).
